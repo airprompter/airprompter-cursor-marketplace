@@ -1,0 +1,18 @@
+{
+  "name": "airprompter",
+  "owner": {
+    "name": "AirPrompter"
+  },
+  "metadata": {
+    "description": "Create, run, and improve AirPrompter workflows from Cursor.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "airprompter",
+      "source": "./plugins/airprompter",
+      "description": "Create, run, and improve AirPrompter workflows from Cursor.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "airprompter",
+  "version": "0.1.0",
+  "description": "Create, run, and improve AirPrompter workflows from Cursor.",
+  "author": {
+    "name": "AirPrompter"
+  },
+  "homepage": "https://airprompter.com",
+  "repository": "https://github.com/airprompter/airprompter-cursor-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "airprompter",
+    "prompts",
+    "workflows",
+    "mcp"
+  ],
+  "logo": "assets/logo.png",
+  "displayName": "AirPrompter"
+}
