@@ -17,7 +17,10 @@ The prompt should:
 - Include an initial research or inspection pass when that helps the role do
   higher-quality work.
 - Ask whether the user wants runtime placeholders.
-- Represent placeholders as `{{placeholder_name}}`.
+- Represent placeholders as `{{placeholder_name}}`. Every placeholder is a
+  required run input collected before step 1. AirPrompter stores no defaults,
+  optional inputs, labels, or example values, so write fixed values directly
+  into the prompt text and never promise a default.
 - Keep placeholder names consistent and reusable.
 - Include output expectations when the task needs a format.
 - Avoid hard-coding one-off content unless the user is intentionally saving a
@@ -31,11 +34,12 @@ The prompt should:
 A workflow is an ordered set of prompt steps. When creating a workflow:
 
 - Ask whether the user wants Personal Library or Team if both are available.
-- For Team, ask for the workspace and playbook when not clear.
+- For Team, ask for the workspace when not clear. Saving does not add the
+  workflow to a playbook.
 - Create or select prompt steps in the order they should run.
 - Allow multiple steps with the same type, such as research, refine, research,
   audit, finalize.
-- Ask before saving if the destination or playbook is ambiguous.
+- Ask before saving if the destination is ambiguous.
 - Use one prompt when a single coherent responsibility can accomplish the North
   Star without becoming overloaded. Use a workflow when intermediate outputs
   add value.

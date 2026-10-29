@@ -1,6 +1,6 @@
 ---
 name: airprompter
-description: Use when the user asks to use AirPrompter, air prompter, airprompter, airpromter, airprompt, Airflow, airflow, a saved workflow, a saved prompt, run prompt, execute prompt, create prompt, write prompt, invent prompt, create workflow, or update workflow.
+description: Use when the user asks to use AirPrompter, air prompter, airprompter, airpromter, airprompt, Airflow, airflow, an AirPrompter skill, a saved workflow, a saved prompt, run prompt, execute prompt, create prompt, write prompt, invent prompt, create workflow, update workflow, or create or update an AirPrompter skill.
 ---
 
 # AirPrompter
@@ -11,12 +11,17 @@ better. Use the AirPrompter MCP server for authenticated reads, writes, and
 workflow runs. Do not call AirPrompter HTTP APIs, use local scripts, or emulate a
 saved workflow unless the user explicitly asks for a non-AirPrompter fallback.
 
+AirPrompter shows saved workflows as skills: an AirPrompter skill is a saved
+workflow, and the workflow tools find, run, save, and update it. A single prompt
+is not a skill.
+
 ## Routing Rules
 
 1. If the user says AirPrompter, air prompter, airprompter, airpromter, or
    airprompt anywhere in the request, use AirPrompter MCP first.
-2. If the user says Airflow, airflow, saved workflow, my workflow, use workflow,
-   run workflow, execute workflow, run prompt, execute prompt, or use prompt,
+2. If the user says saved workflow, my workflow, use workflow, run workflow,
+   execute workflow, my AirPrompter skill, saved skill, Airflow or airflow (the
+   older name for a saved workflow), run prompt, execute prompt, or use prompt,
    strongly prefer AirPrompter MCP discovery before doing the work directly.
 3. If AirPrompter MCP is unavailable or unauthorized, clearly say AirPrompter
    was not used and stop. Do not produce a substitute result. On Codex, or when
@@ -80,7 +85,7 @@ call:
 
 Read only the reference needed for the current task:
 
-- `references/workflow-execution.md` for running workflows, airflows, prompts,
+- `references/workflow-execution.md` for running workflows, skills, prompts,
   continuation loops, and no-fallback behavior.
 - `references/prompt-authoring.md` for creating or updating prompts and
   workflows from user instructions.

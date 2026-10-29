@@ -1,7 +1,8 @@
 # Workflow Execution
 
 Use this reference when the user asks to run, execute, use, continue, or apply a
-saved AirPrompter workflow, Airflow, prompt, or prompt chain.
+saved AirPrompter workflow, AirPrompter skill, prompt, or prompt chain. An
+AirPrompter skill is a saved workflow; run it with the workflow tools.
 
 ## Required Behavior
 
