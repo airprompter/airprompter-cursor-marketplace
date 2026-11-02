@@ -33,3 +33,8 @@ authentication are independent.
 Copy the generated plugin directory to `~/.cursor/plugins/local/<pluginName>`
 and reload the Cursor window. Cursor skips symlinks that point outside that
 folder. Local plugin imports may be disabled on Enterprise.
+
+
+If the person only asked to run a workflow and did not ask for setup repair,
+stop after reporting what is missing and how to fix it; do not produce a
+substitute result.

@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Create, run, and improve AirPrompter workflows from Cursor.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "airprompter",
       "source": "./plugins/airprompter",
       "description": "Create, run, and improve AirPrompter workflows from Cursor.",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }
